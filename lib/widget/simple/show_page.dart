@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:select_one/theme/flex_scheme_notifier.dart';
 
 class ThemeTestPage extends ConsumerWidget {
+  const ThemeTestPage({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
