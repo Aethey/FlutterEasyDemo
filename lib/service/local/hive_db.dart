@@ -1,15 +1,15 @@
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:select_one/config_dev.dart';
 
 class HiveDB {
   static const String _boxName = AppConfig.hiveBaseBoxName;
 
   static Future<void> initHive() async {
-    final appDocumentDir =
-        await path_provider.getApplicationDocumentsDirectory();
-    Hive.init(appDocumentDir.path);
+    // final appDocumentDir =
+    //     await path_provider.getApplicationDocumentsDirectory();
+    // Hive.init(appDocumentDir.path);
+    await Hive.initFlutter();
     await Hive.openBox(_boxName);
   }
 
@@ -29,4 +29,6 @@ class HiveDB {
 }
 
 // how to use:
-// var value = HiveDB.getData("key") ?? {};
+
+// HiveDB.putData('testKey', 'testValue');
+// print('Name: ${HiveDB.getData('testKey')}');

@@ -16,7 +16,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // init DB
-  // await HiveDB.initHive();
+  await HiveDB.initHive();
   // init route
   final router = FluroRouter();
   Routes.defineRoutes(router);
