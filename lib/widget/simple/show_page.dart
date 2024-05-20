@@ -20,7 +20,7 @@ class ThemeTestPage extends ConsumerWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'This is a text widget',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
             ),
             ElevatedButton(

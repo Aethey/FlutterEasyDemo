@@ -8,46 +8,37 @@ class DioClient {
   final receiveTimeout = AppConfig.receiveTimeout;
 
   DioClient() {
-    // Dio 配置
     _dio
-      ..options.baseUrl = baseUrl // 设置你的 API 基地址
-      ..options.connectTimeout =
-          Duration(seconds: connectTimeout) // 连接服务器超时时间，单位是毫秒.
-      ..options.receiveTimeout =
-          Duration(seconds: receiveTimeout); // 接收数据的最长时限.
+      ..options.baseUrl = baseUrl
+      ..options.connectTimeout = Duration(seconds: connectTimeout)
+      ..options.receiveTimeout = Duration(seconds: receiveTimeout);
 
-    // 添加拦截器（可选）
+    // interceptor(optional)
     _dio.interceptors.add(InterceptorsWrapper(onRequest: (options, handler) {
-      // 在请求被发送之前做一些事情
-      return handler.next(options); // 继续请求/响应处理
+      // do before request
+      return handler.next(options);
     }, onResponse: (response, handler) {
-      // 在响应数据返回之前做一些预处理
-      return handler.next(response); // 继续响应处理
+      // Do some preprocessing before the response data return
+      return handler.next(response);
     }, onError: (DioException error, handler) {
-      // 当请求失败时做一些预处理
-      return handler.next(error); // 继续错误处理
+      // error process
+      return handler.next(error);
     }));
   }
 
-  // GET 请求
   Future<Response> get(String endpoint, {Map<String, dynamic>? params}) async {
     try {
       return await _dio.get(endpoint, queryParameters: params);
     } on DioException catch (e) {
-      // 处理错误
       throw e;
     }
   }
 
-  // POST 请求
-  Future<Response> post(String endpoint, {dynamic data}) async {
+  Future<Response> post(String endpoint, {dynamic body}) async {
     try {
-      return await _dio.post(endpoint, data: data);
+      return await _dio.post(endpoint, data: body);
     } on DioException catch (e) {
-      // 处理错误
-      throw e;
+      rethrow;
     }
   }
-
-// 其他请求方法（PUT, DELETE等）可以按需添加
 }
