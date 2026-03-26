@@ -57,7 +57,7 @@ https://rent-ease.go.link/jnQSa?path=cart
 
 
 
-https://sandbox.re-shopping.jp/open-app?productID=01KKBC8HBHV3ZJZJSE1C70G81D
-https://sandbox.re-shopping.jp/app-order?app=1&productID=01KKBC8HBHV3ZJZJSE1C70G81D
+https://rent-ease-dev.go.link/gcdoC?orderID=01KKBC8HBHV3ZJZJSE1C70G81D
+https://rent-ease-dev.go.link/gcdoC?productID=01KKBC8HBHV3ZJZJSE1C70G81D
 https://rent-ease-dev.go.link/gcdoC?path=cart
 
