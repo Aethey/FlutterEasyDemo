@@ -51,7 +51,13 @@ Flutter の公式文書に従って環境設定と構成を行ってください
 
 
 
-https://rent-ease.go.link/jnQSa/cart/current
 https://rent-ease.go.link/jnQSa?productID=01KKBC8HBHV3ZJZJSE1C70G81D
 https://rent-ease.go.link/jnQSa?orderID=01KMCFK0GBEJADVB7ENTJ642WW
+https://rent-ease.go.link/jnQSa?path=cart
+
+
+
+https://sandbox.re-shopping.jp/open-app?productID=01KKBC8HBHV3ZJZJSE1C70G81D
+https://sandbox.re-shopping.jp/app-order?app=1&productID=01KKBC8HBHV3ZJZJSE1C70G81D
+https://rent-ease-dev.go.link/gcdoC?path=cart
 
